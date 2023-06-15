@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Routes, Route } from 'react-router-dom'
+import { HelmetProvider } from 'react-helmet-async';
+
+// components
+import ReadDocx from './components/ReadDocx';
+import SaveToSheets from './components/SaveToSheets';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+  <HelmetProvider>
+  <Routes>
+    <Route path="/" element={<ReadDocx/>}></Route>
+    <Route path="/SaveToSheets" element={<SaveToSheets/>}></Route>
+  </Routes>
+  </HelmetProvider>
     </div>
   );
 }
