@@ -141,7 +141,7 @@ const handleSubmit = async (event) => {
           <div style={{ display: 'flex', justifyContent: 'space-between' }}>
   <div style={{ fontSize: '18px', fontWeight: 'bold', marginBottom: '10px' }}>data from google sheets 📗</div>
   <div>
-  <a
+  <button
   href="#"
   onClick={(e) => {
     e.preventDefault();
@@ -163,7 +163,7 @@ const handleSubmit = async (event) => {
   onMouseLeave={(e) => { e.target.style.backgroundColor = 'white'; e.target.style.color = 'green'; }}
 >
   Google Sheet Link
-</a>
+</button>
 
 
 
